@@ -1,0 +1,1666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magellan Hardwood Floors - Premium Wide Plank Flooring</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-brown: #5a4a3a;
+            --light-brown: #8b7355;
+            --cream: #f5f1e8;
+            --warm-white: #fefdfb;
+            --accent-gold: #eedc53;
+            --dark-gray: #2c2c2c;
+            --border-color: #ebcd3a;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark-gray);
+            background: var(--warm-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(to bottom, rgba(212, 184, 114, 0.95), rgba(196, 169, 98, 0.98));
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-top {
+            background: linear-gradient(135deg, #e6d5a8 0%, #d4b872 100%);
+            padding: 8px 0;
+            text-align: center;
+            color: var(--dark-gray);
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+
+        .header-top a {
+            color: var(--primary-brown);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            height: 60px;
+            filter: brightness(1.1);
+        }
+
+        .logo-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--dark-gray);
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-brown);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: var(--primary-brown);
+            color: var(--warm-white);
+            padding: 12px 28px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(90, 74, 58, 0.3);
+        }
+
+        .cta-button:hover {
+            background: var(--dark-gray);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(90, 74, 58, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1a1410 0%, #3d2f24 100%);
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+            animation: slowZoom 20s ease-in-out infinite alternate;
+        }
+
+        @keyframes slowZoom {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+
+        .hero-content {
+            position: relative;
+            text-align: center;
+            color: var(--warm-white);
+            z-index: 2;
+            max-width: 900px;
+            padding: 2rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+            line-height: 1.2;
+            text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            opacity: 0.95;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 16px 40px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background: var(--accent-gold);
+            color: var(--dark-gray);
+            box-shadow: 0 6px 20px rgba(196, 169, 98, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: #d4b872;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(196, 169, 98, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--warm-white);
+            border: 2px solid var(--warm-white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--warm-white);
+            color: var(--primary-brown);
+            transform: translateY(-3px);
+        }
+
+        /* Filter & Products Section */
+        .products-section {
+            padding: 4rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            color: var(--primary-brown);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--light-brown);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Filter Bar */
+        .filter-bar {
+            background: var(--cream);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .filter-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .filter-group label {
+            display: block;
+            font-weight: 600;
+            color: var(--primary-brown);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        .filter-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 0.95rem;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-group select:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 0 3px rgba(196, 169, 98, 0.1);
+        }
+
+        .search-bar {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .search-bar input {
+            flex: 1;
+            padding: 12px 20px;
+            border: 2px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .search-bar input:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 0 3px rgba(196, 169, 98, 0.1);
+        }
+
+        .search-bar button {
+            padding: 12px 30px;
+            background: var(--primary-brown);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .search-bar button:hover {
+            background: var(--light-brown);
+            transform: translateY(-2px);
+        }
+
+        /* Product Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image {
+            position: relative;
+            overflow: hidden;
+            height: 280px;
+            background: var(--cream);
+        }
+
+        .product-carousel {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-track {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            height: 100%;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .carousel-slide img {
+            transform: scale(1.08);
+        }
+
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--primary-brown);
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 10;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card:hover .carousel-nav {
+            opacity: 1;
+        }
+
+        .carousel-nav:hover {
+            background: var(--accent-gold);
+            color: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-prev {
+            left: 10px;
+        }
+
+        .carousel-next {
+            right: 10px;
+        }
+
+        .carousel-dots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 6px;
+            z-index: 10;
+        }
+
+        .carousel-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-dot.active {
+            background: var(--accent-gold);
+            width: 24px;
+            border-radius: 4px;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--accent-gold);
+            color: var(--dark-gray);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            color: var(--primary-brown);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .product-type {
+            color: var(--light-brown);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .product-specs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .spec {
+            font-size: 0.85rem;
+            color: var(--dark-gray);
+            background: var(--cream);
+            padding: 5px 12px;
+            border-radius: 4px;
+        }
+
+        .product-price {
+            font-size: 1.8rem;
+            color: var(--primary-brown);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .product-price span {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--light-brown);
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-sample {
+            flex: 1;
+            padding: 12px;
+            background: var(--cream);
+            color: var(--primary-brown);
+            border: 2px solid var(--primary-brown);
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-sample:hover {
+            background: var(--primary-brown);
+            color: white;
+        }
+
+        .btn-view {
+            flex: 1;
+            padding: 12px;
+            background: var(--primary-brown);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-view:hover {
+            background: var(--light-brown);
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 4rem 5%;
+            background: var(--cream);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            height: 350px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            padding: 2rem;
+            color: white;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .gallery-overlay h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            color: var(--primary-brown);
+            margin-bottom: 2rem;
+        }
+
+        .about-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--dark-gray);
+            max-width: 900px;
+            margin: 0 auto 2rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            color: var(--accent-gold);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--light-brown);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #e6d5a8 0%, #d4b872 100%);
+            color: var(--dark-gray);
+            padding: 3rem 5%;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-brown);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: var(--dark-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-brown);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(90, 74, 58, 0.3);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--dark-gray);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-row {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            Free Shipping on Orders Over $500 | Contact: <a href="/cdn-cgi/l/email-protection#9ceffdf0f9efdcf1fdfbf9f0f0fdf2faf0f3f3eef5f2fbb2fff3f1"><span class="__cf_email__" data-cfemail="6b180a070e182b060a0c0e07070a050d0704041902050c45080406">[email&#160;protected]</span></a>
+        </div>
+        <nav>
+            <div class="logo-container">
+                <img src="logo.png" alt="Magellan Hardwood Floors" class="logo">
+                <span class="logo-text">MAGELLAN</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact" class="cta-button">Get a Quote</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <img src="LivingRoom1.jpg" alt="Luxury Hardwood Flooring" class="hero-background">
+        <div class="hero-content">
+            <h1>Explore the World of Hardwood</h1>
+            <p>Handcrafted wide-plank hardwood flooring with European coloring techniques and superior quality construction</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary">Browse Collections</a>
+                <a href="#contact" class="btn btn-secondary">Request Samples</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <div class="section-header">
+            <h2>Our Premium Collections</h2>
+            <p>Discover our handcrafted wide-plank flooring made with Western European Oak, featuring top-quality construction and long-length boards</p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+            <div class="filter-row">
+                <div class="filter-group">
+                    <label>Collection</label>
+                    <select id="collection-filter">
+                        <option value="all">All Collections</option>
+                        <option value="amalfi">Amalfi</option>
+                        <option value="castello">Castello</option>
+                        <option value="contemporary">Contemporary</option>
+                        <option value="domaine">Domaine</option>
+                        <option value="variante">Variante</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Color</label>
+                    <select id="color-filter">
+                        <option value="all">All Colors</option>
+                        <option value="light">Light</option>
+                        <option value="medium">Medium</option>
+                        <option value="dark">Dark</option>
+                        <option value="gray">Gray</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Width</label>
+                    <select id="width-filter">
+                        <option value="all">All Widths</option>
+                        <option value="7">7 inches</option>
+                        <option value="7.5">7.5 inches</option>
+                        <option value="9">9 inches</option>
+                        <option value="9.5">9.5 inches</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Sort By</label>
+                    <select id="sort-filter">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="name">Name A-Z</option>
+                    </select>
+                </div>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search flooring by name or style..." id="search-input">
+                <button onclick="searchProducts()">Search</button>
+            </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid">
+            <!-- Product Card 1 - Biarritz -->
+            <div class="product-card" data-collection="variante" data-color="medium" data-price="8.99">
+                <div class="product-image">
+                    <div class="product-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="0001_Biarritz-Flat.jpg" alt="Biarritz Flat View"></div>
+                            <div class="carousel-slide"><img src="0002_Biarritz-Angle.jpg" alt="Biarritz Angle View"></div>
+                            <div class="carousel-slide"><img src="Biarritz-RoomShot-1.jpg" alt="Biarritz Room Installation"></div>
+                        </div>
+                        <button class="carousel-nav carousel-prev" onclick="prevSlide(event, this)">‹</button>
+                        <button class="carousel-nav carousel-next" onclick="nextSlide(event, this)">›</button>
+                        <div class="carousel-dots">
+                            <span class="carousel-dot active"></span>
+                            <span class="carousel-dot"></span>
+                            <span class="carousel-dot"></span>
+                        </div>
+                    </div>
+                    <span class="product-badge">Premium</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Variante Biarritz</h3>
+                    <p class="product-type">European White Oak</p>
+                    <div class="product-specs">
+                        <span class="spec">Width: 9"</span>
+                        <span class="spec">Thickness: 5/8"</span>
+                    </div>
+                    <div class="product-price">$8.99 <span>/ sq ft</span></div>
+                    <div class="product-actions">
+                        <button class="btn-sample">Request Sample</button>
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 2 - Ambroseli -->
+            <div class="product-card" data-collection="contemporary" data-color="medium" data-price="7.99">
+                <div class="product-image">
+                    <div class="product-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="Ambroseli_201.jpg" alt="Ambroseli"></div>
+                        </div>
+                    </div>
+                    <span class="product-badge">New</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Ambroseli</h3>
+                    <p class="product-type">European White Oak</p>
+                    <div class="product-specs">
+                        <span class="spec">Width: 7.5"</span>
+                        <span class="spec">Thickness: 1/2"</span>
+                    </div>
+                    <div class="product-price">$7.99 <span>/ sq ft</span></div>
+                    <div class="product-actions">
+                        <button class="btn-sample">Request Sample</button>
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 3 - Majorca -->
+            <div class="product-card" data-collection="amalfi" data-color="light" data-price="8.49">
+                <div class="product-image">
+                    <div class="product-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="majorca1.jpg" alt="Majorca View 1"></div>
+                            <div class="carousel-slide"><img src="majorca2.jpg" alt="Majorca Room Installation"></div>
+                            <div class="carousel-slide"><img src="majorca3.jpg" alt="Majorca Detail"></div>
+                        </div>
+                        <button class="carousel-nav carousel-prev" onclick="prevSlide(event, this)">‹</button>
+                        <button class="carousel-nav carousel-next" onclick="nextSlide(event, this)">›</button>
+                        <div class="carousel-dots">
+                            <span class="carousel-dot active"></span>
+                            <span class="carousel-dot"></span>
+                            <span class="carousel-dot"></span>
+                        </div>
+                    </div>
+                    <span class="product-badge">Best Seller</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Majorca</h3>
+                    <p class="product-type">European White Oak</p>
+                    <div class="product-specs">
+                        <span class="spec">Width: 7.5"</span>
+                        <span class="spec">Thickness: 1/2"</span>
+                    </div>
+                    <div class="product-price">$8.49 <span>/ sq ft</span></div>
+                    <div class="product-actions">
+                        <button class="btn-sample">Request Sample</button>
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 4 - Moorea -->
+            <div class="product-card" data-collection="contemporary" data-color="light" data-price="7.49">
+                <div class="product-image">
+                    <div class="product-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="moorea1.jpg" alt="Moorea View 1"></div>
+                            <div class="carousel-slide"><img src="moorea2.jpg" alt="Moorea Room Installation"></div>
+                            <div class="carousel-slide"><img src="moorea3.jpg" alt="Moorea Detail"></div>
+                        </div>
+                        <button class="carousel-nav carousel-prev" onclick="prevSlide(event, this)">‹</button>
+                        <button class="carousel-nav carousel-next" onclick="nextSlide(event, this)">›</button>
+                        <div class="carousel-dots">
+                            <span class="carousel-dot active"></span>
+                            <span class="carousel-dot"></span>
+                            <span class="carousel-dot"></span>
+                        </div>
+                    </div>
+                    <span class="product-badge">Trending</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Moorea</h3>
+                    <p class="product-type">European White Oak</p>
+                    <div class="product-specs">
+                        <span class="spec">Width: 7.5"</span>
+                        <span class="spec">Thickness: 1/2"</span>
+                    </div>
+                    <div class="product-price">$7.49 <span>/ sq ft</span></div>
+                    <div class="product-actions">
+                        <button class="btn-sample">Request Sample</button>
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 5 - Rossel -->
+            <div class="product-card" data-collection="domaine" data-color="light" data-price="7.49">
+                <div class="product-image">
+                    <div class="product-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="rossel1.jpg" alt="Rossel View 1"></div>
+                            <div class="carousel-slide"><img src="rossel2.jpg" alt="Rossel Room Installation"></div>
+                            <div class="carousel-slide"><img src="rossel3.jpg" alt="Rossel Detail"></div>
+                        </div>
+                        <button class="carousel-nav carousel-prev" onclick="prevSlide(event, this)">‹</button>
+                        <button class="carousel-nav carousel-next" onclick="nextSlide(event, this)">›</button>
+                        <div class="carousel-dots">
+                            <span class="carousel-dot active"></span>
+                            <span class="carousel-dot"></span>
+                            <span class="carousel-dot"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Rossel</h3>
+                    <p class="product-type">European White Oak</p>
+                    <div class="product-specs">
+                        <span class="spec">Width: 7.5"</span>
+                        <span class="spec">Thickness: 1/2"</span>
+                    </div>
+                    <div class="product-price">$7.49 <span>/ sq ft</span></div>
+                    <div class="product-actions">
+                        <button class="btn-sample">Request Sample</button>
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 6 - Azores -->
+            <div class="product-card" data-collection="variante" data-color="dark" data-price="8.99">
+                <div class="product-image">
+                    <div class="product-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="Variante-Azores-Plank.jpg" alt="Azores Plank"></div>
+                            <div class="carousel-slide"><img src="Variante-Azores-Angle.jpg" alt="Azores Angle"></div>
+                            <div class="carousel-slide"><img src="Variante-Azores-Room.jpg" alt="Azores Room"></div>
+                        </div>
+                        <button class="carousel-nav carousel-prev" onclick="prevSlide(event, this)">‹</button>
+                        <button class="carousel-nav carousel-next" onclick="nextSlide(event, this)">›</button>
+                        <div class="carousel-dots">
+                            <span class="carousel-dot active"></span>
+                            <span class="carousel-dot"></span>
+                            <span class="carousel-dot"></span>
+                        </div>
+                    </div>
+                    <span class="product-badge">Premium</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Variante Azores</h3>
+                    <p class="product-type">European White Oak</p>
+                    <div class="product-specs">
+                        <span class="spec">Width: 9"</span>
+                        <span class="spec">Thickness: 5/8"</span>
+                    </div>
+                    <div class="product-price">$8.99 <span>/ sq ft</span></div>
+                    <div class="product-actions">
+                        <button class="btn-sample">Request Sample</button>
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 7 - Sparta -->
+            <div class="product-card" data-collection="variante" data-color="medium" data-price="8.99">
+                <div class="product-image">
+                    <div class="product-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="Variante-Sparta-Angle.jpg" alt="Sparta Angle"></div>
+                            <div class="carousel-slide"><img src="Variante-Sparta-Room.jpg" alt="Sparta Room"></div>
+                        </div>
+                        <button class="carousel-nav carousel-prev" onclick="prevSlide(event, this)">‹</button>
+                        <button class="carousel-nav carousel-next" onclick="nextSlide(event, this)">›</button>
+                        <div class="carousel-dots">
+                            <span class="carousel-dot active"></span>
+                            <span class="carousel-dot"></span>
+                        </div>
+                    </div>
+                    <span class="product-badge">New</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Variante Sparta</h3>
+                    <p class="product-type">European White Oak</p>
+                    <div class="product-specs">
+                        <span class="spec">Width: 9"</span>
+                        <span class="spec">Thickness: 5/8"</span>
+                    </div>
+                    <div class="product-price">$8.99 <span>/ sq ft</span></div>
+                    <div class="product-actions">
+                        <button class="btn-sample">Request Sample</button>
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Original Products Continue -->
+            <!-- Product Card 8 -->
+            <div class="product-card" data-collection="amalfi" data-color="light" data-price="8.99">
+                <div class="product-image">
+                    <div class="product-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="amalfi-novella-1.jpg" alt="Amalfi Novella"></div>
+                        </div>
+                    </div>
+                    <span class="product-badge">Premium</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Amalfi Novella</h3>
+                    <p class="product-type">European White Oak</p>
+                    <div class="product-specs">
+                        <span class="spec">Width: 9"</span>
+                        <span class="spec">Thickness: 5/8"</span>
+                    </div>
+                    <div class="product-price">$8.99 <span>/ sq ft</span></div>
+                    <div class="product-actions">
+                        <button class="btn-sample">Request Sample</button>
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 9 -->
+            <div class="product-card" data-collection="amalfi" data-color="medium" data-price="8.99">
+                <div class="product-image">
+                    <div class="product-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="amalfi-torello-1.jpg" alt="Amalfi Torello"></div>
+                        </div>
+                    </div>
+                    <span class="product-badge">Premium</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Amalfi Torello</h3>
+                    <p class="product-type">European White Oak</p>
+                    <div class="product-specs">
+                        <span class="spec">Width: 9"</span>
+                        <span class="spec">Thickness: 5/8"</span>
+                    </div>
+                    <div class="product-price">$8.99 <span>/ sq ft</span></div>
+                    <div class="product-actions">
+                        <button class="btn-sample">Request Sample</button>
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 10 -->
+            <div class="product-card" data-collection="castello" data-color="medium" data-price="7.99">
+                <div class="product-image">
+                    <div class="product-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="castello-lucera-1.jpg" alt="Castello Lucera"></div>
+                        </div>
+                    </div>
+                    <span class="product-badge">Best Seller</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Castello Lucera</h3>
+                    <p class="product-type">European White Oak</p>
+                    <div class="product-specs">
+                        <span class="spec">Width: 7.5"</span>
+                        <span class="spec">Thickness: 1/2"</span>
+                    </div>
+                    <div class="product-price">$7.99 <span>/ sq ft</span></div>
+                    <div class="product-actions">
+                        <button class="btn-sample">Request Sample</button>
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 11 -->
+            <div class="product-card" data-collection="contemporary" data-color="dark" data-price="8.49">
+                <div class="product-image">
+                    <div class="product-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="contemporary-bosana-calabria-6.jpg" alt="Contemporary Bosana"></div>
+                        </div>
+                    </div>
+                    <span class="product-badge">New</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Contemporary Bosana</h3>
+                    <p class="product-type">European White Oak</p>
+                    <div class="product-specs">
+                        <span class="spec">Width: 9.5"</span>
+                        <span class="spec">Thickness: 5/8"</span>
+                    </div>
+                    <div class="product-price">$8.49 <span>/ sq ft</span></div>
+                    <div class="product-actions">
+                        <button class="btn-sample">Request Sample</button>
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 12 -->
+            <div class="product-card" data-collection="contemporary" data-color="gray" data-price="8.49">
+                <div class="product-image">
+                    <div class="product-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="contemporary-morseca-calabria-1.jpg" alt="Contemporary Morseca"></div>
+                        </div>
+                    </div>
+                    <span class="product-badge">Trending</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Contemporary Morseca</h3>
+                    <p class="product-type">European White Oak</p>
+                    <div class="product-specs">
+                        <span class="spec">Width: 9.5"</span>
+                        <span class="spec">Thickness: 5/8"</span>
+                    </div>
+                    <div class="product-price">$8.49 <span>/ sq ft</span></div>
+                    <div class="product-actions">
+                        <button class="btn-sample">Request Sample</button>
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 13 -->
+            <div class="product-card" data-collection="domaine" data-color="dark" data-price="7.49">
+                <div class="product-image">
+                    <div class="product-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="domaine-argonne-1.jpg" alt="Domaine Argonne"></div>
+                        </div>
+                    </div>
+                    <span class="product-badge">Premium</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Domaine Argonne</h3>
+                    <p class="product-type">European White Oak</p>
+                    <div class="product-specs">
+                        <span class="spec">Width: 7.5"</span>
+                        <span class="spec">Thickness: 1/2"</span>
+                    </div>
+                    <div class="product-price">$7.49 <span>/ sq ft</span></div>
+                    <div class="product-actions">
+                        <button class="btn-sample">Request Sample</button>
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 14 -->
+            <div class="product-card" data-collection="domaine" data-color="light" data-price="7.49">
+                <div class="product-image">
+                    <div class="product-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="domaine-beaumont-1.jpg" alt="Domaine Beaumont"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Domaine Beaumont</h3>
+                    <p class="product-type">European White Oak</p>
+                    <div class="product-specs">
+                        <span class="spec">Width: 7.5"</span>
+                        <span class="spec">Thickness: 1/2"</span>
+                    </div>
+                    <div class="product-price">$7.49 <span>/ sq ft</span></div>
+                    <div class="product-actions">
+                        <button class="btn-sample">Request Sample</button>
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 15 -->
+            <div class="product-card" data-collection="domaine" data-color="light" data-price="7.49">
+                <div class="product-image">
+                    <div class="product-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="domaine-landes-1.jpg" alt="Domaine Landes"></div>
+                        </div>
+                    </div>
+                    <span class="product-badge">Best Seller</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Domaine Landes</h3>
+                    <p class="product-type">European White Oak</p>
+                    <div class="product-specs">
+                        <span class="spec">Width: 7.5"</span>
+                        <span class="spec">Thickness: 1/2"</span>
+                    </div>
+                    <div class="product-price">$7.49 <span>/ sq ft</span></div>
+                    <div class="product-actions">
+                        <button class="btn-sample">Request Sample</button>
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 16 -->
+            <div class="product-card" data-collection="domaine" data-color="medium" data-price="7.49">
+                <div class="product-image">
+                    <div class="product-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="domaine-montfort-1.jpg" alt="Domaine Montfort"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Domaine Montfort</h3>
+                    <p class="product-type">European White Oak</p>
+                    <div class="product-specs">
+                        <span class="spec">Width: 7.5"</span>
+                        <span class="spec">Thickness: 1/2"</span>
+                    </div>
+                    <div class="product-price">$7.49 <span>/ sq ft</span></div>
+                    <div class="product-actions">
+                        <button class="btn-sample">Request Sample</button>
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 17 -->
+            <div class="product-card" data-collection="domaine" data-color="light" data-price="7.49">
+                <div class="product-image">
+                    <div class="product-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="domaine-orleans-1.jpg" alt="Domaine Orleans"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Domaine Orleans</h3>
+                    <p class="product-type">European White Oak</p>
+                    <div class="product-specs">
+                        <span class="spec">Width: 7.5"</span>
+                        <span class="spec">Thickness: 1/2"</span>
+                    </div>
+                    <div class="product-price">$7.49 <span>/ sq ft</span></div>
+                    <div class="product-actions">
+                        <button class="btn-sample">Request Sample</button>
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="section-header">
+            <h2>Inspiration Gallery</h2>
+            <p>See our beautiful flooring bring spaces to life</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="Bedroom1.jpg" alt="Bedroom with hardwood">
+                <div class="gallery-overlay">
+                    <h3>Modern Bedroom</h3>
+                    <p>Elegant herringbone pattern</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="Kitchen1.jpg" alt="Kitchen with hardwood">
+                <div class="gallery-overlay">
+                    <h3>Luxury Kitchen</h3>
+                    <p>Rich cherry tones</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="LivingRoom1.jpg" alt="Living room with hardwood">
+                <div class="gallery-overlay">
+                    <h3>Contemporary Living</h3>
+                    <p>Natural light oak</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <h2>Craftsmanship Meets Innovation</h2>
+        <p>At Magellan Hardwood Floors, we create the finest handcrafted wide-plank hardwood flooring, finished with the latest European coloring and texturing techniques. Our floors feature top-quality construction for superior stability, sawn top layers, and long-length boards.</p>
+        <p>All of our Magellan Hardwood Floors are made with Western European Oak, which we believe provides the best canvas for creating beautiful floors. American and Russian Oak simply cannot compare to the fine grain structure and color of true European Oak.</p>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Years of Experience</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">European Oak</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">1000+</div>
+                <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">Lifetime Quality</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Magellan Floors</h3>
+                <p>Premium wide-plank hardwood flooring crafted with European excellence.</p>
+                <p style="margin-top: 1rem;">
+                    <strong>Email:</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7f0c1e131a0c3f121e181a13131e11191310100d161118511c1012">[email&#160;protected]</a><br>
+                    <strong>Phone:</strong> (555) 123-4567
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Collections</h3>
+                <ul>
+                    <li><a href="#">Amalfi Collection</a></li>
+                    <li><a href="#">Castello Collection</a></li>
+                    <li><a href="#">Contemporary Collection</a></li>
+                    <li><a href="#">Domaine Collection</a></li>
+                    <li><a href="#">Variante Collection</a></li>
+                    <li><a href="#">Custom Orders</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Installation Guide</a></li>
+                    <li><a href="#">Care & Maintenance</a></li>
+                    <li><a href="#">Sample Program</a></li>
+                    <li><a href="#">Warranty Information</a></li>
+                    <li><a href="#">Trade Program</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Magellan Hardwood Floors. All rights reserved. | Privacy Policy | Terms of Service</p>
+        </div>
+    </footer>
+
+    <script>
+        // Carousel functionality
+        let carouselIntervals = new Map();
+
+        function initCarousels() {
+            document.querySelectorAll('.product-carousel').forEach((carousel, index) => {
+                const slides = carousel.querySelectorAll('.carousel-slide');
+                if (slides.length > 1) {
+                    startAutoSlide(carousel);
+                }
+            });
+        }
+
+        function startAutoSlide(carousel) {
+            const interval = setInterval(() => {
+                const track = carousel.querySelector('.carousel-track');
+                const slides = carousel.querySelectorAll('.carousel-slide');
+                const dots = carousel.querySelectorAll('.carousel-dot');
+                
+                let currentIndex = 0;
+                dots.forEach((dot, i) => {
+                    if (dot.classList.contains('active')) {
+                        currentIndex = i;
+                    }
+                });
+
+                let nextIndex = (currentIndex + 1) % slides.length;
+                
+                track.style.transform = `translateX(-${nextIndex * 100}%)`;
+                dots[currentIndex].classList.remove('active');
+                dots[nextIndex].classList.add('active');
+            }, 4000); // Auto-slide every 4 seconds
+
+            carouselIntervals.set(carousel, interval);
+        }
+
+        function stopAutoSlide(carousel) {
+            const interval = carouselIntervals.get(carousel);
+            if (interval) {
+                clearInterval(interval);
+            }
+        }
+
+        function prevSlide(event, button) {
+            event.stopPropagation();
+            const carousel = button.closest('.product-carousel');
+            const track = carousel.querySelector('.carousel-track');
+            const slides = carousel.querySelectorAll('.carousel-slide');
+            const dots = carousel.querySelectorAll('.carousel-dot');
+            
+            let currentIndex = 0;
+            dots.forEach((dot, i) => {
+                if (dot.classList.contains('active')) {
+                    currentIndex = i;
+                }
+            });
+
+            let prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+            
+            track.style.transform = `translateX(-${prevIndex * 100}%)`;
+            dots[currentIndex].classList.remove('active');
+            dots[prevIndex].classList.add('active');
+
+            // Restart auto-slide
+            stopAutoSlide(carousel);
+            startAutoSlide(carousel);
+        }
+
+        function nextSlide(event, button) {
+            event.stopPropagation();
+            const carousel = button.closest('.product-carousel');
+            const track = carousel.querySelector('.carousel-track');
+            const slides = carousel.querySelectorAll('.carousel-slide');
+            const dots = carousel.querySelectorAll('.carousel-dot');
+            
+            let currentIndex = 0;
+            dots.forEach((dot, i) => {
+                if (dot.classList.contains('active')) {
+                    currentIndex = i;
+                }
+            });
+
+            let nextIndex = (currentIndex + 1) % slides.length;
+            
+            track.style.transform = `translateX(-${nextIndex * 100}%)`;
+            dots[currentIndex].classList.remove('active');
+            dots[nextIndex].classList.add('active');
+
+            // Restart auto-slide
+            stopAutoSlide(carousel);
+            startAutoSlide(carousel);
+        }
+
+        // Pause auto-slide on hover
+        document.addEventListener('DOMContentLoaded', () => {
+            initCarousels();
+
+            document.querySelectorAll('.product-card').forEach(card => {
+                const carousel = card.querySelector('.product-carousel');
+                
+                card.addEventListener('mouseenter', () => {
+                    stopAutoSlide(carousel);
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    if (carousel.querySelectorAll('.carousel-slide').length > 1) {
+                        startAutoSlide(carousel);
+                    }
+                });
+            });
+
+            // Dot navigation
+            document.querySelectorAll('.carousel-dot').forEach((dot, dotIndex) => {
+                dot.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const carousel = this.closest('.product-carousel');
+                    const track = carousel.querySelector('.carousel-track');
+                    const dots = carousel.querySelectorAll('.carousel-dot');
+                    
+                    track.style.transform = `translateX(-${dotIndex * 100}%)`;
+                    dots.forEach(d => d.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Restart auto-slide
+                    stopAutoSlide(carousel);
+                    startAutoSlide(carousel);
+                });
+            });
+        });
+
+        // Filter functionality
+        function filterProducts() {
+            const collection = document.getElementById('collection-filter').value;
+            const color = document.getElementById('color-filter').value;
+            const cards = document.querySelectorAll('.product-card');
+
+            cards.forEach(card => {
+                const cardCollection = card.dataset.collection;
+                const cardColor = card.dataset.color;
+                
+                const collectionMatch = collection === 'all' || cardCollection === collection;
+                const colorMatch = color === 'all' || cardColor === color;
+
+                if (collectionMatch && colorMatch) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Search functionality
+        function searchProducts() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const cards = document.querySelectorAll('.product-card');
+
+            cards.forEach(card => {
+                const productName = card.querySelector('.product-name').textContent.toLowerCase();
+                const productType = card.querySelector('.product-type').textContent.toLowerCase();
+
+                if (productName.includes(searchTerm) || productType.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Sort functionality
+        function sortProducts() {
+            const sortBy = document.getElementById('sort-filter').value;
+            const grid = document.querySelector('.products-grid');
+            const cards = Array.from(document.querySelectorAll('.product-card'));
+
+            cards.sort((a, b) => {
+                if (sortBy === 'price-low') {
+                    return parseFloat(a.dataset.price) - parseFloat(b.dataset.price);
+                } else if (sortBy === 'price-high') {
+                    return parseFloat(b.dataset.price) - parseFloat(a.dataset.price);
+                } else if (sortBy === 'name') {
+                    const nameA = a.querySelector('.product-name').textContent;
+                    const nameB = b.querySelector('.product-name').textContent;
+                    return nameA.localeCompare(nameB);
+                }
+                return 0;
+            });
+
+            cards.forEach(card => grid.appendChild(card));
+        }
+
+        // Event listeners
+        document.getElementById('collection-filter').addEventListener('change', filterProducts);
+        document.getElementById('color-filter').addEventListener('change', filterProducts);
+        document.getElementById('sort-filter').addEventListener('change', sortProducts);
+        document.getElementById('search-input').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') searchProducts();
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
